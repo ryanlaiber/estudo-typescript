@@ -1,13 +1,15 @@
-const person: {
-  name: string
-  age: number
-  hobbies: string[]
-  role: [number, string]
-} = {
-  name: 'Ryan',
-  age: 28,
-  hobbies: ['sports', 'gamming'],
-  role: [2, 'author'],
+let input: unknown;
+let userName: string;
+
+input = 5;
+input = 'oioi';
+
+if (typeof input === 'string') {
+  userName = input;
 }
 
-console.log(person.name);
+function generateError(message: string, code: number) {
+  throw {message, errorCode: code};
+}
+
+generateError('caraca maluco!', 899);
